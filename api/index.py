@@ -2,7 +2,7 @@ import json
 from http.server import BaseHTTPRequestHandler
 from flask import Flask, jsonify, request
 import json
-import data
+import api.data_source as data_source
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -26,8 +26,8 @@ def get_data():
 
     X=request.args.getlist('name')
 
-    marks1=data.data_dict[X[0]]
-    marks2=data.data_dict[X[1]]
+    marks1=data_source.data_dict[X[0]]
+    marks2=data_source.data_dict[X[1]]
 
 
 
