@@ -33,6 +33,11 @@ def get_data():
 
     return jsonify({'marks': [marks1,marks2]})
 
+@app.route('/', methods=['GET'])
+def get_data():
+
+
+    return jsonify({'location': "index page"})
 
 if __name__ == '__main__':
     app.run(debug=True)
