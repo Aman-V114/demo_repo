@@ -34,7 +34,7 @@ def get_data():
     return jsonify({'marks': [marks1,marks2]})
 
 @app.route('/', methods=['GET'])
-def get_data():
+def home():
 
 
     return jsonify({'location': "index page"})
