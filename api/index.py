@@ -23,14 +23,15 @@ def get_data():
 
     
     X=request.args.getlist('name')
-    marks=list()
+    marks=dict()
     
     for x in X:
         
-        if(x not in X.keys()):
-            marks.append(data_dict[x])
+        if(x not in marks.keys()):
+            marks[x]=data_dict[x]
 
-    return jsonify({'marks': marks})
+    
+    return jsonify({'marks': marks.values()})
 
 @app.route('/', methods=['GET'])
 def home():
