@@ -21,11 +21,14 @@ CORS(app)
 @app.route('/api', methods=['GET'])
 def get_data():
 
+    
     X=request.args.getlist('name')
     marks=list()
     
     for x in X:
-        marks.append(data_dict[x])
+        
+        if(x not in X.keys()):
+            marks.append(data_dict[x])
 
     return jsonify({'marks': marks})
 
