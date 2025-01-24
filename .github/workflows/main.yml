@@ -1,0 +1,11 @@
+name: CI/CD demo for tds assignment
+
+on: 
+  push:# Trigger the workflow on every push to any branch
+
+jobs:
+  test: # Job ID
+    runs-on: ubuntu-latest
+    steps:
+      - name: 23f1002942@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
