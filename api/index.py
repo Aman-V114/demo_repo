@@ -2,7 +2,7 @@ import json
 from http.server import BaseHTTPRequestHandler
 from flask import Flask, jsonify, request
 import json
-
+from flask_cors import CORS
 dictionary=dict()
 
 with open('data.json', 'r') as file:
@@ -16,7 +16,7 @@ for l in data_list:
 
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/api', methods=['GET'])
 def get_data():
