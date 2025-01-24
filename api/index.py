@@ -22,11 +22,11 @@ CORS(app)
 def get_data():
 
     X=request.args.getlist('name')
+    marks=list()
+    for x in x:
+        marks.append(data_dict[x])
 
-    marks1=data_dict[X[0]]
-    marks2=data_dict[X[1]]
-
-    return jsonify({'marks': [marks1,marks2]})
+    return jsonify({'marks': marks]})
 
 @app.route('/', methods=['GET'])
 def home():
