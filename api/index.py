@@ -14,15 +14,6 @@ for l in data_list:
     
     data_dict[l['name']]=l['marks']
 
-class handler(BaseHTTPRequestHandler):
-    
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type','application/json')
-        self.end_headers()
-        self.wfile.write(json.dumps({"message": "Hello!"}).encode('utf-8'))
-        return
-
 
 app = Flask(__name__)
 
