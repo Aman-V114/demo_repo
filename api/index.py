@@ -23,10 +23,11 @@ def get_data():
 
     X=request.args.getlist('name')
     marks=list()
-    for x in x:
+    
+    for x in X:
         marks.append(data_dict[x])
 
-    return jsonify({'marks': [marks]})
+    return jsonify({'marks': marks})
 
 @app.route('/', methods=['GET'])
 def home():
