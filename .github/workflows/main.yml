@@ -1,7 +1,7 @@
 name: CI/CD demo for tds assignment
 
 on: 
-  push:# Trigger the workflow on every push to any branch
+  push: # Trigger the workflow on every push to any branch
 
 jobs:
   test: # Job ID
