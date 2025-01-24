@@ -26,7 +26,7 @@ def get_data():
     for x in x:
         marks.append(data_dict[x])
 
-    return jsonify({'marks': marks]})
+    return jsonify({'marks': [marks]})
 
 @app.route('/', methods=['GET'])
 def home():
