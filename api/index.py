@@ -5,7 +5,7 @@ import json
 from flask_cors import CORS
 dictionary=dict()
 
-with open('data.json', 'r') as file:
+with open('demo_repo/data.json', 'r') as file:
     data_list = json.load(file)
 
 data_dict=dict()
