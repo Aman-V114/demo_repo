@@ -18,6 +18,7 @@ for l in data_list:
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/api', methods=['GET'])
 def get_data():
 
